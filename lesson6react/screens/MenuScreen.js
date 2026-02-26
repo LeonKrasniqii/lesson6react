@@ -1,7 +1,7 @@
 import React from "react";
 import { View,Text,StyleSheet,Button,TouchableOpacity } from "react-native-web";
 
-const MenuScreen = () =>{
+const MenuScreen = (props) =>{
     return(
         <View>
             <Text style={StyleSheet.text}>
@@ -11,7 +11,7 @@ const MenuScreen = () =>{
                 <Button
                     title="Go to List Screen"
                     color="green"
-                    onPress={() => console.log('Button Clicked', counter++)}
+                    onPress={() => props.navigation.navigate('List')}
                 />
         </View>
     )
